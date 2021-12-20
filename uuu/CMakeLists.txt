@@ -31,6 +31,7 @@ set(LSTS
 	spl_boot.lst
 	sd_burn_all.lst
 	nand_burn_loader.lst
+        sdc_a03_all.lst
 )
 
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libuuu ${LIBUSB_LIBRARY_DIRS} ${LIBZ_LIBRARY_DIRS})

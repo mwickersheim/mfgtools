@@ -298,6 +298,11 @@ static std::string str_to_upper(const std::string &str)
 //! Array containing raw information about all the built-in scripts of uuu
 static constexpr BuiltInScriptRawData g_builtin_cmd[] =
 {
+    {
+        "sdc_a03_all",
+#include "sdc_a03_all.clst"
+        ,"burn bootloader and software to SDC-A03 devices."
+    },
 	{
 		"emmc",
 #include "emmc_burn_loader.clst"
