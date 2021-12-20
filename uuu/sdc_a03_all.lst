@@ -1,14 +1,14 @@
 uuu_version 1.2.39
 
-# @_flexspi.bin            | bootloader
-# @_image   [_flexspi.bin] | image burn to flexspi, default is the same as bootloader
+# @_flash.bin            | bootloader, which can extract from wic image
+# @_image   [_flash.bin] | wic image burn to emmc.
 
 # This command will be run when i.MX6/7 i.MX8MM, i.MX8MQ
-SDP: boot -f _flexspi.bin
+SDP: boot -f _flash.bin
 
 # SDC Uboot
 FB: ucmd setenv fastboot_buffer 0x12000000
-FB: download -f _image
+FB: download -f _flash.bin
 FB: ucmd sf probe
 FB[-t 40000]: ucmd sf erase 0 0xc0000
 FB[-t 40000]: ucmd sf write 0x12000000 0x400 ${filesize}
