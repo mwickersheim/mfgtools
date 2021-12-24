@@ -20,4 +20,5 @@ FB: ucmd mmc dev ${sd_dev}
 FB: flash -raw2sparse all _image
 FB: flash -scanterm bootloader _flash.bin
 
+FB: acmd reset
 FB: done
