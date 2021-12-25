@@ -20,5 +20,12 @@ FB: ucmd mmc dev ${sd_dev}
 FB: flash -raw2sparse all _image
 FB: flash -scanterm bootloader _flash.bin
 
-FB: acmd reset
+# FB: acmd sync
+FB: acmd sleep 10
+FB: delay 15000
+
+# FB: ucmd reset
+# SDP: boot -f _flash.bin
+
+FB: ucmd boot
 FB: done
