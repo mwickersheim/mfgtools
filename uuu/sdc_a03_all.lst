@@ -26,6 +26,6 @@ FB: delay 15000
 
 # FB: ucmd reset
 # SDP: boot -f _flash.bin
-
+# FB: done
 FB: ucmd boot
 FB: done
